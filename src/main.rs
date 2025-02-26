@@ -6,7 +6,7 @@ fn main() {
     print!("$ ");
     io::stdout().flush().unwrap();
 
-    loop {
+   'infinite: loop {
         // Wait for user input
         let stdin = io::stdin();
         let mut input = String::new();
