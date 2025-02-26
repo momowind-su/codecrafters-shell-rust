@@ -1,3 +1,4 @@
+use std::iter::Skip;
 #[allow(unused_imports)]
 use std::{cmp, io::{self, Write}};
 
@@ -29,8 +30,10 @@ fn main() {
         let args= &parts[1..];
 
         match command {
-            Commands::Exit0 => {
-                break;
+            Commands::Exit => {
+                if args.contains(&0.to_string()){
+                    break;
+                }
             }
 
             Commands::Echo => {

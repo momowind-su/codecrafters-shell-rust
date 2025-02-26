@@ -1,7 +1,7 @@
 use std::str::FromStr;
 
 pub enum Commands {
-    Exit0,
+    Exit,
     Echo,
     Unknown(String),
 }
@@ -11,7 +11,7 @@ impl FromStr for Commands {
 
    fn from_str(s: &str) -> Result<Self, Self::Err> {
        match s {
-           "exit 0" => Ok(Commands::Exit0),
+           "exit" => Ok(Commands::Exit),
            "echo" => Ok(Commands::Echo),
            other => Ok(Commands::Unknown(other.to_string()))
        }
