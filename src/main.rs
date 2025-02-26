@@ -1,7 +1,7 @@
 #[allow(unused_imports)]
-mod commands;
-
 use std::{cmp, io::{self, Write}};
+
+mod commands;
 use commands::Commands;
 
 
